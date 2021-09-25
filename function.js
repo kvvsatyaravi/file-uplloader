@@ -50,3 +50,8 @@ function readFile(input) {
     previewZone.addClass('hidden');
     reset(dropzone);
   });
+
+  $(document).ready(function(){
+    $('#title').focus();
+      $('#text').autosize();
+  });
