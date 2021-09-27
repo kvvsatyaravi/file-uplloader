@@ -6,12 +6,13 @@
   <title>Drag and Drop file Uploader | Text data uploader</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel="stylesheet" href="style.css">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 <section>
-  <form action="upload.php" method="POST" enctype="multipart/form-data">
+  <form action="php/upload.php" method="POST" enctype="multipart/form-data">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -50,7 +51,7 @@
     </div>
   </form>
   
-  <form action="uploadtext.php" method="POST" >
+  <form action="php/uploadtext.php" method="POST" >
     <div class="container">
       <div class="row">
         <center><h4><b>Text uploader</b></h4></center>
@@ -77,6 +78,19 @@
 
     </div>
   </form>
+
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <button class="btn btn-primary" 
+      onclick="window.location.href = 'files/';">
+          Uploaded file
+      </button>
+      <button class="btn btn-primary"
+    onclick="window.location.href = '#';">
+        Uploaded text
+    </button>
+    </div>
+  </div>
 </section>
 
 

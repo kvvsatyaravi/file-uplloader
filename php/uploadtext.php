@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($title and $data) {
     echo "text title:".$title."<br>";
-    echo "text data:".$data;
+    echo "text data:".$data."<br>";
     $insert = "INSERT INTO textuploader(title,text) VALUES ('$title','$data')";
     if(mysqli_query($con, $insert)){
         echo "Records inserted successfully.";
