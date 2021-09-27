@@ -6,14 +6,15 @@
 <body>
     <div class="container">
     <center><h3>Files uploaded</h3></center>
-    <div class="row">
-    <center><table border="1">
+    <div class="row-2 ">
+    <center><table class="table table-bordered border-primary table-hover" border="1">
         <tr>
         <th>Sno</th>
         <th>File name</th>
         <th>Type</th>
         <th>Size</th>
         <th>Date & Time</th>
+        <th>Button</th>
         </tr>
         
         <?php
@@ -37,6 +38,11 @@
         echo "<td>" . $row['size'] . "</td>";
 
         echo "<td>" . $row['date'] . "</td>";
+        echo "<td>
+        <button type='button'class='btn btn-danger '>click here
+          <i class='fas fa-times'></i>
+        </button>
+        </td>";
 
         echo "</tr>";
 
