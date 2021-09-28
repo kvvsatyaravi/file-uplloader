@@ -1,5 +1,5 @@
 <?php   
-include 'db/auth.php';
+include '../db/auth.php';
    if(isset($_FILES['file'])){
       $errors= array();
       $file_name = $_FILES['file']['name'];
@@ -21,10 +21,10 @@ include 'db/auth.php';
       }
       
       if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"files/".$file_name);
-         $file_path = "files/";
-         $file_path = getcwd($file_path);
-         $insert = "INSERT INTO filesupload(filename,filepath,type,size) VALUES ('$file_name','$file_path','$file_type','$file_size')";
+         move_uploaded_file($file_tmp,"../files/".$file_name);
+         $file_path = "../files/";
+         
+         $insert = "INSERT INTO filesupload(filename,type,size) VALUES ('$file_name','$file_type','$file_size')";
          if(mysqli_query($con, $insert)){
             echo "Records inserted successfully.";
             echo "Success";
