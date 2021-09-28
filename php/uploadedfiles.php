@@ -39,9 +39,9 @@
 
         echo "<td>" . $row['date'] . "</td>";
         echo "<td>
-        <button type='button'class='btn btn-danger '>click here
+        <a href=../files/". $row['filename'] ."  class='btn btn-danger '>Click here
           <i class='fas fa-times'></i>
-        </button>
+        </a>
         </td>";
 
         echo "</tr>";
