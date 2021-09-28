@@ -1,6 +1,6 @@
 
 <?php
-include 'db/auth.php';
+include '../db/auth.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
   $title = mysqli_real_escape_string($con,$_POST['title']);
